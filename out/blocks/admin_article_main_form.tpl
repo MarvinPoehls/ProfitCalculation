@@ -63,7 +63,7 @@
         [{oxmultilang ident="FC_ARTICLE_PROFIT"}]
     </td>
     <td class="edittext">
-        <p>[{$edit->fcGetProfit()}]</p>
+        <p>Profit</p>
     </td>
 </tr>
 <tr>

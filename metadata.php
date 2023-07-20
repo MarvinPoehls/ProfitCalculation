@@ -15,8 +15,8 @@ $aModule = [
         'en' => 'Profit calculation',
     ],
     'description'  => [
-        'de' => 'Modul welches den Gewinn für jeden Artikel berechnet.',
-        'en' => 'Module which calculates the profit for each article.',
+        'de' => 'Modul welches den Gewinn für jeden Artikel berechnet und im Admin ausgibt.',
+        'en' => 'Module which calculates the profit for each article and displays it in the admin.',
     ],
     'thumbnail'    => '',
     'version'      => '1.0',
@@ -26,6 +26,7 @@ $aModule = [
     'controllers' => [],
     'extend'       => [
         OxidEsales\Eshop\Application\Component\Widget\ArticleDetails::class => MarvinPoehls\ProfitCalculation\Component\Widget\ArticleDetails::class,
+        OxidEsales\Eshop\Application\Model\Article::class => MarvinPoehls\ProfitCalculation\Model\Article::class,
     ],
     'blocks' => [
         [
@@ -35,7 +36,5 @@ $aModule = [
         ],
     ],
     'settings' => [],
-    'events' => [
-        'onActivate' => 'MarvinPoehls\ProfitCalculation\Core\Events\Setup::onActivate',
-    ]
+    'events' => []
 ];

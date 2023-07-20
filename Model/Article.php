@@ -4,7 +4,7 @@ namespace MarvinPoehls\ProfitCalculation\Model;
 
 class Article extends Article_parent
 {
-    function fcGetProfit()
+    public function fcGetProfit()
     {
         if (empty($this->oxarticles__oxbprice->value) || empty($this->oxarticles__oxprice->value)) {
             return false;

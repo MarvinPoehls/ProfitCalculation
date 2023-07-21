@@ -4,6 +4,8 @@ namespace MarvinPoehls\ProfitCalculation\Model;
 
 class Article extends Article_parent
 {
+    private int $profit = 0;
+
     public function fcGetProfit()
     {
         if (empty($this->oxarticles__oxbprice->value) || empty($this->oxarticles__oxprice->value)) {
@@ -15,6 +17,12 @@ class Article extends Article_parent
         $vat = $this->getArticleVat()/100;
 
         $turnover = $sellPrice/1+$vat;
-        return $turnover - $purchasePrice;
+        $this->profit = $turnover - $purchasePrice;
+        return $this->profit;
+    }
+
+    public function fcGetProfitColor(): bool
+    {
+        return ($this->profit >= 0) ? '#ff00ff' : '#00ffff';
     }
 }

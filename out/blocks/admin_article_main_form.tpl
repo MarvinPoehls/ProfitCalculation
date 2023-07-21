@@ -63,7 +63,7 @@
         [{oxmultilang ident="FC_ARTICLE_PROFIT"}]
     </td>
     <td class="edittext">
-        <p>Profit</p>
+        <p style="[{$edit->fcGetProfitColor()}]">[{$edit->fcGetProfit()}]%</p>
     </td>
 </tr>
 <tr>

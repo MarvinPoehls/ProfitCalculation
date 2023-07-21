@@ -25,7 +25,6 @@ $aModule = [
     'email'        => 'marvin.poehls@fatchip.de',
     'controllers' => [],
     'extend'       => [
-        OxidEsales\Eshop\Application\Component\Widget\ArticleDetails::class => MarvinPoehls\ProfitCalculation\Component\Widget\ArticleDetails::class,
         OxidEsales\Eshop\Application\Model\Article::class => MarvinPoehls\ProfitCalculation\Model\Article::class,
     ],
     'blocks' => [

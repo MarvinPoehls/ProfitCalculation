@@ -18,11 +18,14 @@ class Article extends Article_parent
 
         $turnover = $sellPrice/1+$vat;
         $this->profit = $turnover - $purchasePrice;
-        return $this->profit;
+        return $this->profit.'%';
     }
 
-    public function fcGetProfitColor(): bool
+    public function fcGetProfitColor(): string
     {
-        return ($this->profit >= 0) ? '#ff00ff' : '#00ffff';
+        if ($this->profit >= 0) {
+            return '#00AA22';
+        }
+        return '#970b0e';
     }
 }
